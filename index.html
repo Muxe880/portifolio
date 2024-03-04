@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible"content="IE=edge">
+<meta name="viewport"content="width=device-width, initial-scale=1.0">
+<title>Personal Portfolio Website</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/9fb3656b0c.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/logo.png" class="logo">
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#header">Portfolio</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+        <p> Web Developer</p>
+        <h1>Hi, I'm <span>Moxe</span><br>Mahlaule</h1>
+        </div>
+        <button>
+      <a href="images/my-cv.pdf" download class="button">Download CV</a>
+      </button>
+      </div>
+    </div>
+    <!--------------about------------->
+    <div id="about">
+      <div class="containter">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/user.JPEG">
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>I am a graduate from Tshwane university of technology with national diploma in 
+              information technology specialising in software development,
+              I am very passionate about coding and i am currently looking for internship in that field
+              where i can showcase my skills, I am very eager to enhance and redefine my personal development in 
+              the industry. I am confident that I have the knowledge and skills to professionally thrive in this industry.</p>
+              
+              <div class="tab-titles">
+                <p class="tab-links active-link" onClick="opentab('skills')">skills</p>
+                <p class="tab-links" onClick="opentab('experience')">Experience</p>
+                <p class="tab-links" onClick="opentab('education')">Education</p>
+              </div>
+              <div class="tab-contents active-tab" id="skills">
+                <ul>
+                  <li><span>Web Developer</span></li>
+                  <li><span>Oracle(MySQL/PL)</span></li>
+                  <li><span>C++/C# libraries</span></li>
+                  <li><span>Web Developer</span></li>
+                  <li><span>SDLC processes</span></li>
+                  <li><span>Agile scrum master</span></li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="experience">
+                <ul>
+                  <li><span>2023 - Current</span><br>IT Support Technician at Cogta</li>
+                  <li><span>2022-Mar - 2022-Aug</span><br>WIL at Office Of The Premier</li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="education">
+                <ul>
+                  <li><span>2024 - Current</span><br>Web development at INTERN CAREER</li>
+                  <li><span>2017 - 2022</span><br>National Diploma in information technology(software development) at Tshwane university <br>of technology</li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-----------contact---------------------->
+<div id="contact">
+<div class="container">
+  <dv class="row">
+    <div class="contact-left">
+      <h1 class="sub-title">Contacts</h1>
+      <p><i  class="fa-solid fa-envelope"></i></i>muxe880@gmail.com</p>
+      <p><i class="fa-sharp fa-solid fa-square-phone"></i> 0727334122</p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin"></i></i></i></a>
+        <a href="https://github.com/Muxe880"><i class="fa-brands fa-github"></i></a>
+      </div>
+      
+    </div>
+    <div class="contact-right">
+      <form action="https://formsubmit.co/muxe880@gmail.com" method="post" >
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+        <button type="submit" class="button button2">Send Message</button>
+      </form>
+    </div>
+  </dv>
+</div>
+<div class="copyright">
+  <p>copyright @ Moxe</p>
+</div>
+</div>
+
+
+
+<script>
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname){
+  for(tablink of tablinks){
+    tablink.classList.remove("active-link");
+  }
+  for(tabcontent of tabcontents){
+    tabcontent.classList.remove("active-tab");
+  }
+  event.currentTarget.classList.add("active-link");
+  document.getElementById(tabname).classList.add("active-tab");
+}
+</script>
+
+<script>
+
+var sidemenu = document.getElementById("sidemenu");
+
+function openmenu(){
+  sidemenu.style.right = "0";
+}
+function closemenu(){
+  sidemenu.style.right = "-200px";
+}
+</script>
+
+    </body>
+</html>
